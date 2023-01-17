@@ -1,0 +1,147 @@
+
+        //DECLARATION OF ALL SUPPLIES
+
+
+        //Rifles
+        supplies Muzzleloader = new supplies("Muzzleloader", 800, "The shooter must load this type of rifle from the front end of its barrel – i.e. the muzzle. For every shot fired the shooter must insert powder and a ball or bullet down the barrel, as well as insert a new percussion cap to provide ignition.\n" +
+                "\n" +
+                "The muzzleloader works on a similar principle to Revolutionary War era rifles. Its slow rate of fire and relatively complex reloading process make it totally obsolete as far as combat and self-defense are concerned. Modern muzzleloader rifles are usually favored by hunters who seek a more challenging or old-fashioned experience.");
+
+        supplies SingleShot = new supplies("Single-Shot Rifle", 600, "A single shot rifle holds a single round of ammunition, and it holds it right in its chamber. The shooter must manually reload a single shot rifle after firing every single shot. Its simplistic design means that a single-shot rifle does not need a very large receiver. It also has very few moving parts that could fail. Common types of single shot rifles are the bolt-action, break-action, muzzleloader, and lever-action. Less common types of rifles that are single shot include the rolling block, trapdoor, and drop blocks/falling block.\n" +
+                "\n" +
+                "Their slow rate of fire (which can be significantly sped up by a skilled shooter) restricts single-shot rifles to precision shooting and hunting applications, although survival and plinking single-shot rifles are commonly chambered for 22 LR. A single-shot rifle is also a good choice for teaching a younger shooter, partly because an unintentional discharge cannot fire multiple rounds of ammo.");
+
+        supplies BoltAction = new supplies("Bolt-Action Rifle", 1300, "This type of rifle has a manual action. By pulling its bolt backward, you eject the spent case. By returning the bolt forward, you chamber a new round. A bolt-action rifle may feed rounds from a magazine or require the shooter to insert each new round into the chamber by hand.\n" +
+                "\n" +
+                "A bolt-action rifle has a very slow rate of fire compared to more modern rifle designs. But it is highly reliable, and its action’s solid and minimalistic design promotes better accuracy than an automatic or a semi-automatic can typically achieve. As such, bolt-action rifles are favored by precision shooters and hunters. That’s because they want to do the job with a single shot.");
+
+        supplies leveraction = new supplies("Lever-Action Rifle", 1235, "A lever-action rifle’s name is self-explanatory: In order to eject the spent round and chamber the next one, the shooter pulls down and pushes up on a ringed lever positioned next to the trigger. A lever-action rifle stores its cartridges in a tubular magazine that runs parallel to the barrel, and typically requires ammunition loaded with flat nose bullets.\n" +
+                "\n" +
+                "Lever-action rifles have a slower rate of fire than semi-autos, but like bolt actions they are more reliable. Operating a lever action is a great deal of fun and reminiscent of the cowboy days. While a lever action can be handled effectively during combat, it is far from an optimal choice for self-defense. In fact, the U.S. Army never issued lever-action rifles because shooters cannot operate them while in prone position.");
+        supplies autorifle = new supplies("Automatic", 1300, "Often called a machine gun, an automatic rifle is capable of firing for as long as its trigger is pulled (and as long as it has ammo to fire). The M4 carbine issued by the U.S. Army has an automatic firing mode, in addition to semi-automatic and burst firing modes.\n" +
+                "\n" +
+                "It is not impossible for a civilian to own an automatic rifle in the United States. The manufacturer must have produced the rifle itself prior to May 19th, 1986, and there is a considerable amount of red tape involved in the process. Though, an automatic rifle can be affordable if you avoid one of the more popular models like the M16 or the Uzi.");
+        supplies semiautorifle = new supplies("Semi-Automatic Rifle", 1100, "A semi-automatic rifle may be identical to an automatic rifle save for one exception: it will fire exactly one round for every trigger pull. Two of the most common semi-automatic rifles are the Ruger 10-22 which shoots .22LR ammo, and the AR-15 which most commonly shoots .223 ammo. Semi-auto rifles may use different operating systems, the two most common being the direct impingement and gas piston.\n" +
+                "\n" +
+                "America’s beloved AR-15 is a semi-automatic rifle. A semi-auto rifle offers the same ballistic and terminal performance as an analogous automatic, which is to say rate of fire has no effect on each individual round’s performance. If you’re shopping for a rifle for home defense, a semi-auto is the best way to go.");
+        supplies breakaction = new supplies("Break-Action", 230, "Break-action rifles are similar to break-action shotguns. The gun hinges open where the action and barrel meet. This allows the shooter to load rounds and eject spent casings. The Thompson Center Contender and CVA Scout rifle are two popular break-action rifles available today.");
+        supplies pumpaction = new supplies("Pump-Action", 1000, "Pump-action rifles function like pump-action shotguns. The shooter moves the rifle’s forend forward and backward in order to eject a spent casing and chamber a new round. Although pump-action rifles date back to the late 1800s, there are manufacturers still producing them today. Two examples of modern pump-action rifles include the Remington 7600 and the Henry Pump Action Octagon.");
+
+        ArrayList<supplies> riflesList = new ArrayList<supplies>();
+        riflesList.add(Muzzleloader);
+        riflesList.add(SingleShot);
+        riflesList.add(BoltAction);
+        riflesList.add(leveraction);
+        riflesList.add(autorifle);
+        riflesList.add(semiautorifle);
+        riflesList.add(breakaction);
+        riflesList.add(pumpaction);
+        showroom rifles = new showroom(riflesList, "RIFLES");
+
+        //Shotguns
+        supplies pumpActionShot = new supplies("Pump-Action Shotgun", 800, "Pump-action shotguns are similar to semi-automatic shotguns, but they require two hands. The user must pump the action manually after every shot. Some pumps are gas-operated, while others utilize spring power.\n");
+        supplies leverActionShot = new supplies("Lever-Action Shotgun", 700, "Lever action shotguns are usually considered the fastest shooting type of shotgun. The lever-action system cycles through each shell quickly.\n" +
+                "\n" +
+                "\n" +
+                "This type of shotguns is excellent for shooting birds because you can load it with multiple shots before being released.\n" +
+                "\n" +
+                "However, the drawback to lever-action shotguns is that the shells tend to fall out of the magazine faster than others because the covers slide down the tube rather than being held in place.");
+        supplies boltActionShot = new supplies("Bolt-Action Shotgun", 700, "Bolt action shotguns are one of the oldest firearms still in production today. Many of these weapons were designed during the Civil War era.\n" +
+                "\n" +
+                "These guns feature a rotating bolt that moves back and forth inside the barrel chamber. As the bolt rotates, it pushes cartridges down the barrel. Once the last cartridge has been made out of the barrel, the bolt locks open and allows the next round to move forward.\n" +
+                "\n" +
+                "Bolt actions are generally slower to shoot than other types of shotguns. They do not cycle through each shell-like semi-autos or pump action. Instead, the user must pull the trigger once per shell.\n" +
+                "\n" +
+                "Bolt action shotguns are the most popular among athletes. They are easy to use and maintain.b Also, the bolt action design makes them more reliable than pump-action firearms.");
+        supplies sidebyside = new supplies("Side-by-Side Shotgun", 800, "Side-by-side shotguns are also known as double-barreled shotguns. These guns are designed to allow the user to fire two rounds at once.\n" +
+                "\n" +
+                "The gun consists of two barrels that lie next to each other. Side-by-side shotguns are also known as side-by-side doubles. These guns are similar to over/under, except the barrels are positioned next.\n" +
+                "\n" +
+                "Side-by-side shotguns are typically smaller versions of double-barreled shotguns. They are often found mounted on a tripod stand so that the shooter can position himself correctly.");
+        supplies semiAutoShot = new supplies("Semi-Automatic Shotgun", 800, "The most common type of a shotgun is the semi-automatic shotgun. These weapons are easy to use and require no special skills or training. Semi-automatic shotguns use the recoil energy stored in the shell casing to reload each shell after being fired.\n" +
+                "\n" +
+                "The shells are loaded into a magazine that holds up to 12 rounds of ammunition. The action cycles through all the chambers when the trigger is pulled until the last shell is fired. After the last shell has been fired, the magazine will automatically eject and load another shell.\n" +
+                "\n" +
+                "The semi-automatic shotgun is very versatile. They are great for both home defense and recreational shooting. Most models come equipped with either a pistol grip or a stock, giving the shooter an improved hold on the weapon.");
+        supplies singleShotShot = new supplies("Single-Shot Shotgun", 300, "Single-shot shotguns are the simplest form of shotgun. There is only one chamber in the barrel. This means that only one bullet can be fired at any given time.\n" +
+                "\n" +
+                "Unlike double-barrel shotguns, single-shot shotguns do not have any revolving cylinders.\n" +
+                "\n" +
+                "A single-shot shotgun is ideal for close-range combat. The advantage of this type of firearm is that it does not jam easily and can be used when there is no time to reload.\n" +
+                "\n" +
+                "Single-shot shotguns aren’t accurate and are not best for hunting small game like rabbits and squirrels.");
+        supplies doubleBarrelShot = new supplies("Double-Barrel Shotgun", 700, "Double barrel shotguns are similar to pump actions, except they have two barrels and two separate triggers instead of just one. One trigger fires the left barrel, and the other fires the right barrel. It fires twice as many shots per pull of the trigger.  \n" +
+                "\n" +
+                "This type of shotgun is best suited for those who want to shoot two shots at once. It allows the user to hit two targets simultaneously without switching between the two barrels.\n" +
+                "\n" +
+                "Double-barrel shotgun has a revolving cylinder that holds all the shells in place until it’s ready to shoot. After each pull of the trigger, the shell slides out of the chamber and into the barrel, where it is fired.");
+        supplies overunder = new supplies("Over/Under Shotgun", 800, "Over/under shotguns are designed so that the barrel lies above the receiver. The top barrel is located farther away from the shooter than the bottom.\n" +
+                "\n" +
+                "Over/under shotguns are designed to allow the shooter to choose whether he wants to shoot over or under the intended target. The shells are placed above or below the barrel’s centerline, depending on the user’s preference.\n" +
+                "\n" +
+                "It is designed so that the barrel is above the receiver. This allows the shooter to see if the shot is going high or low without looking down the barrel.");
+        ArrayList<supplies> shotgunsList = new ArrayList<supplies>();
+        shotgunsList.add(pumpActionShot);
+        shotgunsList.add(leverActionShot);
+        shotgunsList.add(boltActionShot);
+        shotgunsList.add(sidebyside);
+        shotgunsList.add(semiAutoShot);
+        shotgunsList.add(singleShotShot);
+        shotgunsList.add(doubleBarrelShot);
+        shotgunsList.add(overunder);
+        showroom shotguns = new showroom(shotgunsList, "SHOTGUNS");
+
+        //HANDGUNS
+        supplies glock19 = new supplies("Glock-19", 650, "The Glock 19 is a popular semi-automatic handgun known for its reliability and ease of use. It has a polymer frame and a 9mm caliber.");
+        supplies mandP = new supplies("M&P", 500, "The M&P (Military and Police) is a semi-automatic handgun produced by Smith & Wesson. It is available in several calibers and has a polymer frame.");
+        supplies sr9 = new supplies("Ruger SR9", 550, "The Ruger SR9 is a semi-automatic handgun with a stainless steel slide and a polymer frame. It is chambered in 9mm and is known for its accuracy and durability.");
+        supplies p226 = new supplies("P226",950,"The P226 is a semi-automatic handgun produced by SIG Sauer. It is widely used by military and law enforcement agencies around the world and is available in several calibers.");
+        supplies xd = new supplies("XD", 450,"The XD is a semi-automatic handgun produced by Springfield Armory. It has a polymer frame and is available in several calibers. It is known for its reliability and ease of use. " );
+        ArrayList<supplies> handgunsList = new ArrayList<supplies>();
+        handgunsList.add(glock19);
+        handgunsList.add(mandP);
+        handgunsList.add(sr9);
+        handgunsList.add(p226);
+        handgunsList.add(xd);
+        showroom handguns = new showroom(handgunsList, "HANDGUNS");
+
+        //SPY GEAR
+        supplies goldfinger = new supplies("Goldfinger", 1000000, "In the film \"Goldfinger,\" James Bond's watch serves as a communication device, a laser cutter, and a detonator.");
+        supplies shoes = new supplies("Ethan Hunt's Shoes", 10000000, "In the film \"Mission: Impossible - Ghost Protocol,\" Ethan Hunt's shoes are equipped with magnets that allow him to walk on the outside of buildings.");
+        supplies multitool = new supplies("Jason Bourne's Multitool", 99999, "In the film \"The Bourne Identity,\" Jason Bourne's multi-tool serves as a lock pick, a glass cutter, and a handcuff key.");
+        supplies hook = new supplies("BRUCE WAYNE'S GRAPPLING HOOK", 9999, "In the film \"The Dark Knight,\" Bruce Wayne's grappling hook is used as a means of transportation and as a weapon.");
+        ArrayList<supplies> spyList = new ArrayList<supplies>();
+        spyList.add(goldfinger);
+        spyList.add(shoes);
+        spyList.add(hook);
+        spyList.add(multitool);
+        showroom spygear = new showroom(spyList, "SPY GEAR");
+
+        //MYTHICAL
+
+        supplies hammer = new supplies("Mjolnir", 1000000000, "Mjolnir is a mythical hammer wielded by Thor, the Norse god of thunder. In the MCU, it is depicted as a powerful weapon that can only be wielded by those deemed worthy.");
+        supplies axe = new supplies("Stormbreaker",1000000000, "Stormbreaker is another mythical weapon wielded by Thor in the MCU. It is an axe that can summon the Bifrost, a bridge that connects the nine realms." );
+        supplies shield = new supplies("Captain America's Shield", 1000000000, "Captain America's shield is a fictional weapon wielded by Steve Rogers in the MCU. It is made of Vibranium, a rare and indestructible metal, and is used as a defensive and offensive weapon.");
+        supplies glove = new supplies("Infinity Gauntlet", 1000000000, "The Infinity Gauntlet is a fictional weapon that appears in the MCU. It is a gauntlet that houses six Infinity Stones, which give the wielder immense power and control over the universe.");
+        supplies sword = new supplies("Excalibur", 1000000000, "Excalibur is a mythical sword that appears in Arthurian legend. It is said to be the most powerful weapon in the world and is wielded by King Arthur.");
+        ArrayList<supplies> mythicalList = new ArrayList<supplies>();
+        mythicalList.add(hammer);
+        mythicalList.add(axe);
+        mythicalList.add(shield);
+        mythicalList.add(glove);
+        mythicalList.add(sword);
+        showroom mythical = new showroom(mythicalList, "MYTHICAL GEAR");
+
+        //GRENADES
+        supplies smoke = new supplies("Smoke Grenade", 200, "Releases smoke, clouding enemy vision\n");
+        supplies frag = new supplies("Frag Grenade", 500, "Detonates and shoots high-velocity projectiles");
+        supplies flash = new supplies("Flashbang", 250, "Blinds the enemy");
+        supplies chem = new supplies("Chemical Grenade", 1000, "releases harmful chemicals that can kill the enemy");
+        ArrayList<supplies> grenadeList = new ArrayList<supplies>();
+        grenadeList.add(smoke);
+        grenadeList.add(frag);
+        grenadeList.add(flash);
+        grenadeList.add(chem);
+        showroom grenades = new showroom(grenadeList, "GRENADES");
+
+        //END OF DECLARING ALL SUPPLIES
