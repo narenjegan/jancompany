@@ -780,9 +780,9 @@ public class main {
         settings account = new settings(username, passcode);
 
         for (int i = 5; i >= 1; i--) {
-            System.out.println("ENTER YOUR USERNAME");
+            System.out.println("CONFIRM YOUR USERNAME");
             String loginuser = scanner.nextLine();
-            System.out.println("ENTER YOUR PASSCODE");
+            System.out.println("CONFIRM YOUR PASSCODE");
             String loginpass = scanner.nextLine();
 
             settings login = new settings(loginuser, loginpass);
@@ -853,6 +853,7 @@ public class main {
                 goodBye();
             } else {
                 System.out.println("GOODBYE.");
+                System.exit(0);
             }
         }
     }
@@ -1102,14 +1103,14 @@ public class main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("SELECT A NUMBER");
-        for (int i = 1; i < riflesList.size(); i++) {
+        for (int i = 1; i <= riflesList.size(); i++) {
             System.out.println(i + ". " + riflesList.get(i - 1).getName());
         }
         System.out.println((riflesList.size() + 1) + ". RETURN TO SHOWROOM MENU");
         int option = scanner.nextInt();
         scanner.nextLine();
 
-        if (option >= 1 && option <= 7) {
+        if (option >= 1 && option <= riflesList.size()) {
             System.out.println(riflesList.get(option - 1));
         } else {
             showroomMenu(account);
@@ -1128,7 +1129,7 @@ public class main {
                 scanner.nextLine();
                 order newOrder = new order(riflesList.get(option - 1).getName(), riflesList.get(option - 1).getPrice(), riflesList.get(option - 1).getDescription(), quantity);
 
-                if ((newOrder.getPrice() * newOrder.getQuantity()) < account.getBalance()) {
+                if ((newOrder.getPrice() * newOrder.getQuantity()) > account.getBalance()) {
                     System.out.println("INVALID REQUEST. CHECK BALANCE");
                 } else if ((newOrder.getPrice() * newOrder.getQuantity()) >= account.getBalance()) {
                     System.out.println("ORDER PLACED");
@@ -1205,14 +1206,14 @@ public class main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("SELECT A NUMBER");
-        for (int i = 1; i < shotgunsList.size(); i++) {
+        for (int i = 1; i <= shotgunsList.size(); i++) {
             System.out.println(i + ". " + shotgunsList.get(i - 1).getName());
         }
         System.out.println((shotgunsList.size() + 1) + ". RETURN TO SHOWROOM MENU");
         int option = scanner.nextInt();
         scanner.nextLine();
 
-        if (option >= 1 && option <= 7) {
+        if (option >= 1 && option <= shotgunsList.size()) {
             System.out.println(shotgunsList.get(option - 1));
         } else {
             showroomMenu(account);
@@ -1231,7 +1232,7 @@ public class main {
                 scanner.nextLine();
                 order newOrder = new order(shotgunsList.get(option - 1).getName(), shotgunsList.get(option - 1).getPrice(), shotgunsList.get(option - 1).getDescription(), quantity);
 
-                if (newOrder.getPrice() * newOrder.getQuantity() < account.getBalance()) {
+                if (newOrder.getPrice() * newOrder.getQuantity() > account.getBalance()) {
                     System.out.println("ORDER NOT VALID");
                 } else {
                     System.out.println("ORDER PLACED");
@@ -1267,14 +1268,14 @@ public class main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("SELECT A NUMBER");
-        for (int i = 1; i < handgunsList.size(); i++) {
+        for (int i = 1; i <= handgunsList.size(); i++) {
             System.out.println(i + ". " + handgunsList.get(i - 1).getName());
         }
         System.out.println((handgunsList.size() + 1) + ". RETURN TO SHOWROOM MENU");
         int option = scanner.nextInt();
         scanner.nextLine();
 
-        if (option >= 1 && option <= 7) {
+        if (option >= 1 && option <= handgunsList.size()) {
             System.out.println(handgunsList.get(option - 1));
         } else {
             showroomMenu(account);
@@ -1293,7 +1294,7 @@ public class main {
                 scanner.nextLine();
                 order newOrder = new order(handgunsList.get(option - 1).getName(), handgunsList.get(option - 1).getPrice(), handgunsList.get(option - 1).getDescription(), quantity);
 
-                if (newOrder.getPrice() * newOrder.getQuantity() < account.getBalance()) {
+                if (newOrder.getPrice() * newOrder.getQuantity() > account.getBalance()) {
                     System.out.println("ORDER NOT VALID");
                 } else {
                     System.out.println("ORDER PLACED");
@@ -1326,14 +1327,14 @@ public class main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("SELECT A NUMBER");
-        for (int i = 1; i < grenadeList.size(); i++) {
+        for (int i = 1; i <= grenadeList.size(); i++) {
             System.out.println(i + ". " + grenadeList.get(i - 1).getName());
         }
         System.out.println((grenadeList.size() + 1) + ". RETURN TO SHOWROOM MENU");
         int option = scanner.nextInt();
         scanner.nextLine();
 
-        if (option >= 1 && option <= 7) {
+        if (option >= 1 && option <= grenadeList.size()) {
             System.out.println(grenadeList.get(option - 1));
         } else {
             showroomMenu(account);
@@ -1351,7 +1352,7 @@ public class main {
                 int quantity = scanner.nextInt();
                 scanner.nextLine();
                 order newOrder = new order(grenadeList.get(option - 1).getName(), grenadeList.get(option - 1).getPrice(), grenadeList.get(option - 1).getDescription(), quantity);
-                if (newOrder.getPrice() * newOrder.getQuantity() < account.getBalance()) {
+                if (newOrder.getPrice() * newOrder.getQuantity() > account.getBalance()) {
                     System.out.println("ORDER NOT VALID");
                 } else {
                     System.out.println("ORDER PLACED");
@@ -1383,14 +1384,14 @@ public class main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("SELECT A NUMBER");
-        for (int i = 1; i < spyList.size(); i++) {
+        for (int i = 1; i <= spyList.size(); i++) {
             System.out.println(i + ". " + spyList.get(i - 1).getName());
         }
         System.out.println((spyList.size() + 1) + ". RETURN TO SHOWROOM MENU");
         int option = scanner.nextInt();
         scanner.nextLine();
 
-        if (option >= 1 && option <= 7) {
+        if (option >= 1 && option <= spyList.size()) {
             System.out.println(spyList.get(option - 1));
         } else {
             showroomMenu(account);
@@ -1408,7 +1409,7 @@ public class main {
                 int quantity = scanner.nextInt();
                 scanner.nextLine();
                 order newOrder = new order(spyList.get(option - 1).getName(), spyList.get(option - 1).getPrice(), spyList.get(option - 1).getDescription(), quantity);
-                if (newOrder.getPrice() * newOrder.getQuantity() < account.getBalance()) {
+                if (newOrder.getPrice() * newOrder.getQuantity() > account.getBalance()) {
                     System.out.println("ORDER NOT VALID");
                 } else {
                     System.out.println("ORDER PLACED");
@@ -1448,7 +1449,7 @@ public class main {
         int option = scanner.nextInt();
         scanner.nextLine();
 
-        if (option >= 1 && option <= 7) {
+        if (option >= 1 && option < mythicalList.size()) {
             System.out.println(mythicalList.get(option - 1));
         } else {
             showroomMenu(account);
@@ -1466,7 +1467,7 @@ public class main {
                 int quantity = scanner.nextInt();
                 scanner.nextLine();
                 order newOrder = new order(mythicalList.get(option - 1).getName(), mythicalList.get(option - 1).getPrice(), mythicalList.get(option - 1).getDescription(), quantity);
-                if (newOrder.getPrice() * newOrder.getQuantity() < account.getBalance()) {
+                if (newOrder.getPrice() * newOrder.getQuantity() > account.getBalance()) {
                     System.out.println("ORDER NOT VALID");
                 } else {
                     System.out.println("ORDER PLACED");
@@ -1825,7 +1826,7 @@ public class main {
 
     public static void mission(){
 
-        System.out.println("\n\nIn order to find an alternative solution to killing off the population, we (who shall not be named for our security) took\n" +
+        System.out.println("\n\nIn order to find an alternative solution to killing off the population, we took\n" +
                 "matters into our own hands. For years, we have observed a planet in a distant system, along the path of\n" +
                 "Comet Hale-Bopp. We plan to secretly launch a rocket in a secluded location to avoid any radio trackers from jamming\n" +
                 "and shooting us down, latch on to the comet, hibernate, and explore the planet. Lucky, Do, and Ti are the astronauts\n" +
